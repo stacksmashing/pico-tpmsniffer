@@ -1,0 +1,66 @@
+; All rights reserved. Copyright by Thomas Roth. code@stacksmashing.net
+
+.program lpc_sniffer
+.side_set 1 opt
+
+entry:
+    ; Wait for LFRAME (ABSOLUTE pin 0) to go low
+    SET X, 15 side 0
+    WAIT 1 GPIO 5
+    WAIT 0 GPIO 5; ~0ns
+    NOP
+    NOP
+    NOP
+    NOP
+read_target:
+    IN PINS 4 side 1; starts at ~20ns | read 0/40ns
+    NOP side 1; first: 10ns | 30ns second round
+    NOP side 0 [3]; read 10ns
+    JMP X-- read_target [1] side 0 ; read 20ns
+    PUSH
+
+    JMP entry
+
+% c-sdk {
+static inline void lpc_sniffer_program_init(PIO pio, uint sm, uint offset, uint base_pin, uint debug_pin) {
+    pio_sm_config c = lpc_sniffer_program_get_default_config(offset);
+
+    // We have no out pins
+    // sm_config_set_out_pins(&c, base_pin, 1);
+
+    //pio_gpio_init(pio, 0);
+    for(int i=0; i < 4; i++) {
+        pio_gpio_init(pio, base_pin + i);
+    }
+    //hw_set_bits(&pio->input_sync_bypass, 1);
+
+    // frame pin
+    pio_gpio_init(pio, 0);
+    pio_gpio_init(pio, 5);
+
+    pio_gpio_init(pio, debug_pin);
+
+    // Set all 4 pins to input (false = input)
+    pio_sm_set_consecutive_pindirs(pio, sm, 0, 1, false);
+    pio_sm_set_consecutive_pindirs(pio, sm, base_pin, 4, false);
+    sm_config_set_in_pins(&c, base_pin);
+
+    sm_config_set_sideset_pins(&c, debug_pin);
+    pio_sm_set_consecutive_pindirs(pio, sm, debug_pin, 1, true);
+
+    sm_config_set_in_shift (&c, false, true, 32);
+
+
+    // Chain FIFOs together as we will *only* receive.
+    // This will ensure we will not block.
+    sm_config_set_fifo_join(&c, PIO_FIFO_JOIN_RX);
+
+    float div = (float)clock_get_hz(clk_sys) / 200000000.0;
+    sm_config_set_clkdiv(&c, div);
+    
+    // Load our configuration, and jump to the start of the program
+    pio_sm_init(pio, sm, offset, &c);
+    // Set the state machine running
+    pio_sm_set_enabled(pio, sm, true);
+}
+%}
