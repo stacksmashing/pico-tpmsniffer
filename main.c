@@ -7,12 +7,20 @@
 #include "hardware/pio.h"
 #include "hardware/clocks.h"
 #include "pico/multicore.h"
+#include "tusb.h"
+
+#define LED_PIN PICO_DEFAULT_LED_PIN
 
 // Our assembled program:
 #include "lpc_sniffer.pio.h"
 
 
 #include "hardware/flash.h"
+
+// set bool for our wait loop till someone connects via serial
+bool serial_data_available() {
+    return tud_cdc_connected();
+}
 
 unsigned char reverse(unsigned char b) {
    b = (b & 0xF0) >> 4 | (b & 0x0F) << 4;
@@ -134,10 +142,31 @@ void core1_entry() {
 
 
 int main() {
-    set_sys_clock_khz(270000, true); // 158us
     stdio_init_all();
-    sleep_ms(5000);
 
+    printf("[+] Waiting for USB Serial connection...\n");
+
+    // Wait until USB Serial connection is established
+    while (!serial_data_available()) {
+        printf("Waiting for USB Serial connection...\n");
+        sleep_ms(1000); // wait for 1 second before checking again
+    }
+
+    printf("[+] USB Serial connection established!\n");
+    sleep_ms(5000); // Wait for 5 seconds after USB Serial connection is established
+
+    // Initialize LED pin
+    gpio_init(LED_PIN);
+    gpio_set_dir(LED_PIN, GPIO_OUT);
+
+    // Toggle LED to indicate USB connection
+    gpio_put(LED_PIN, 1); // Turn on LED
+    sleep_ms(500); // Wait for 500ms
+    gpio_put(LED_PIN, 0); // Turn off LED
+
+    // Rest of original code
+    set_sys_clock_khz(270000, true); 
+    
     puts(" _           ");
     puts("|_) o  _  _  ");
     puts("|   | (_ (_) ");
@@ -149,7 +178,6 @@ int main() {
     puts("    888     888    d888b Y8b Y8b   8edP  888 888 888  888    888    \"YeeP\" 888    ");
     puts("                                                                 - by stacksmashing");
     puts("");
-
     printf("[+] Ready to sniff!\n");
 
     multicore_launch_core1(core1_entry);
@@ -176,4 +204,6 @@ int main() {
             }
         }
     }
+
+    return 0;
 }
