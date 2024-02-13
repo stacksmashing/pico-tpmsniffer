@@ -14,6 +14,10 @@ cmake ..
 make
 ```
 
+## Hardware
+
+The board files are in `hardware/`, the Pogo pins used are of the type: P50-B1-16mm
+
 ## Usage
 
 Just connect to the serial port, boot your machine, and push against the card connector!
