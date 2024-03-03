@@ -10,7 +10,8 @@ pico_sdk_init()
 add_executable(tpm_sniffer)
 
 pico_generate_pio_header(tpm_sniffer ${CMAKE_CURRENT_LIST_DIR}/lpc_sniffer.pio)
-
+pico_generate_pio_header(tpm_sniffer ${CMAKE_CURRENT_LIST_DIR}/spi_sniffer.pio)
+pico_generate_pio_header(tpm_sniffer ${CMAKE_CURRENT_LIST_DIR}/spi_bios_sniffer.pio)
 target_sources(tpm_sniffer PRIVATE main.c)
 
 target_link_libraries(tpm_sniffer PRIVATE

