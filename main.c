@@ -213,6 +213,12 @@ void core1_entry()
 }
 
 int main() {
+    /* havent decided yet on how to select the sniff_protocol
+     * could setup a python script with the option to select
+     * the protocol of choice and output the serial data. This
+     * would also allow to directly save the captured key to a
+     * file.
+     */
     set_sys_clock_khz(270000, true); // 158us
     stdio_init_all();
     
