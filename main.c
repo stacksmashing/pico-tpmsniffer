@@ -160,8 +160,13 @@ int main() {
         // Wait til the msg_buffer_ptr is full
         while((msg_buffer_ptr - popped) < 44) {
         }
-        
-        if(memcmp(message_buffer + popped, vmk_header, 5) == 0) {
+        // Generic VMK looks like
+        // 2C00|0X00|0X00|0000|0X20|0000
+        if( (memcmp(message_buffer + popped, vmk_header, 2) == 0) &&\
+            (memcmp(message_buffer + popped + 3, vmk_header + 3, 1) == 0) &&\
+            (memcmp(message_buffer + popped + 5, vmk_header + 5, 3) == 0) &&\
+            (memcmp(message_buffer + popped + 9, vmk_header + 9, 3) == 0))
+        {
             printf("[+] Bitlocker Volume Master Key found:\n");
 
             for(int i=0; i < 2; i++) {
