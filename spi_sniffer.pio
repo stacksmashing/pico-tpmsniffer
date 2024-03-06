@@ -1,54 +1,48 @@
-; Modifications by zaphoxx@gmail.com
-; All rights reserved. 
-; Original Copyright by Thomas Roth. code@stacksmashing.net
-; This modification targets tpm sniffing on the SPI Bus 
-; for sniffing on BIOS CHIP pins please refer to 
-; spi_bios_sniffer
+; program to sniff spi communication directly on the tpm chip
+; SELECT pin has to be active low when sampling
+; sampling happens on rising clock edge
+; phase 0
 
 .program spi_sniffer
 
-; IN pin 0 is the data pin (SO)
-; IN pin 1 is the clock pin (CLK)
-; IN pin 2 is the select pin (SCK)
-;
-; JMP PIN is pin 2 same as SCK 
-; autopush is enabled , threshold 8
+; IN pin 0 DO 
+; IN pin 1 DI
+; IN pin 2 CLK
+; IN pin 3 SELECT / JMP_PIN
 
-; wait for SCK go LOW 
-; sample data with each rising clock edge
-; If SCK is LOW then sample bit from SO
-; If SCK is HIGH then wait for next clock cycle
-; repeat
-
+entry:
+    wait 1 pin 3
+	wait 0 pin 3			; wait for SCK to go High
 .wrap_target
-	wait 0 pin 2			; wait for SCK to go High
 clock_cycle:
-	wait 0 pin 1			; wait for clock low
-	wait 1 pin 1			; wait for clock high (sample @ rising edge)
-	jmp pin clock_cycle     ; make sure SCK is still low before sampling bit
-sample_bit:
-	in pins, 1			; sample data bit from SO
+	wait 0 pin 2			; wait for clock low
+	wait 1 pin 2			; wait for clock high (sample @ rising edge)
+	jmp pin clock_cycle; make sure SCK is still high before sampling bit
+sample_bits:
+	in pins, 2			    ; sample data bit from DO and DI 
 .wrap 
 
 % c-sdk {
 static inline void spi_sniffer_program_init(PIO pio, uint sm, uint offset, uint base_pin, uint jmp_pin) {
     pio_sm_config c = spi_sniffer_program_get_default_config(offset);
     
-    // initialize 3 input pins SO, CLK, SCK
-    for(int i=0; i < 3; i++) {
+    // initialize 4 input pins DO, DI, CLK, SELECT
+    for(int i=0; i < 4; i++) {
         pio_gpio_init(pio, base_pin + i);
     }
-    // initialize JUMP PIN
-    pio_gpio_init(pio, jmp_pin);
+    //gpio_pull_down(base_pin + 3); // set inner pull up resistor for SELET pin
+    
+    // initialize JUMP PIN (Here this is actually not necessary)
+    // pio_gpio_init(pio, jmp_pin);
 
     // Set all pins to input (false = input)
-    pio_sm_set_consecutive_pindirs(pio, sm, base_pin, 3, false);
+    pio_sm_set_consecutive_pindirs(pio, sm, base_pin, 4, false);
     sm_config_set_in_pins(&c, base_pin);
     sm_config_set_jmp_pin(&c, jmp_pin);
-    pio_sm_set_consecutive_pindirs(pio, sm, jmp_pin, 1, false);
 
-    // set autopush at threshold 8 bit
-    sm_config_set_in_shift (&c, false, true, 8);
+    // set autopush at threshold 16 bit
+    // we are reading DO and DI at the same time
+    sm_config_set_in_shift (&c, false, true, 16);
 
     // Chain FIFOs together as we will *only* receive.
     // This will ensure we will not block.

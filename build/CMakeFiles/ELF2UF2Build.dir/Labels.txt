@@ -1,0 +1,13 @@
+# Target labels
+ ELF2UF2Build
+# Source files and their labels
+/home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles/ELF2UF2Build
+/home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles/ELF2UF2Build.rule
+/home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles/ELF2UF2Build-complete.rule
+/home/pico/pico/projects/pico-tpmsniffer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-build.rule
+/home/pico/pico/projects/pico-tpmsniffer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure.rule
+/home/pico/pico/projects/pico-tpmsniffer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-download.rule
+/home/pico/pico/projects/pico-tpmsniffer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-install.rule
+/home/pico/pico/projects/pico-tpmsniffer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-mkdir.rule
+/home/pico/pico/projects/pico-tpmsniffer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-patch.rule
+/home/pico/pico/projects/pico-tpmsniffer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-update.rule

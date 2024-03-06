@@ -1,0 +1,1 @@
+cmd='/usr/bin/cmake;-DCMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/gmake;-GUnix Makefiles;-C<TMP_DIR>/PioasmBuild-cache-$<CONFIG>.cmake;<SOURCE_DIR><SOURCE_SUBDIR>'

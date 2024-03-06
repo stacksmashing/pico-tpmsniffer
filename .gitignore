@@ -1,1 +1,3 @@
 ./build
+build-tpmsniffer.sh
+main-spi.c

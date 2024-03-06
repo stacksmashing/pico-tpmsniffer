@@ -54,26 +54,54 @@ static inline uint32_t fetch(PIO pio, uint sm) {
     return result;
 }
 
-static inline char fetch_spi_message(PIO pio, uint sm){
-    char data, data1, data2, data3, data4;
+/*  fetch_spi_message
+ *  DI and DO (mosi,miso) are captured simultaneously
+ *  1 bit at a time per line. auto pushing in total 16 bits
+ *  into the RX-FIFO. So bits 0,2,4 ... 14 are the DO bits
+ *  and bits 1,3,5 ... 15 are the DI bits.
+ */
+static inline uint8_t fetch_spi_message(PIO pio, uint sm) {
+    uint64_t mosi_msg=0x0;
+    uint64_t miso_msg=0x0;
+    uint32_t data;
+    bool init = true;
+    //printf("[fetch_message] \n");
+    while(1)
+    {
+        char miso_byte = 0x0;
+        char mosi_byte = 0x0;
+        uint16_t mosi_msk = 0b0100000000000000;
+        uint16_t miso_msk = 0b1000000000000000; 
+        data = fetch(pio, sm);
+        // ### untangle DO and DI parts ####
+        for (int i = 0; i < 8 ; i++)
+        {   
+            miso_byte = miso_byte | ((char) ((data & miso_msk) >> (8-i))) ;
+            mosi_byte = mosi_byte | ((char) ((data & mosi_msk) >> (7-i))) ;
+            miso_msk = miso_msk >> 2;
+            mosi_msk = mosi_msk >> 2;
+        }
+        // #################################
 
-    // looking for the signature 0x80000001 before the 
-    // actual data byte from the TPM chip response (SO)
-    // return the data byte only, skip everything else
-    while (1) {
-	data1 = (char) (pio_sm_get_blocking(pio, sm) );
-	if (data1 != 0x80) continue;
-	data2 = (char) (pio_sm_get_blocking(pio, sm));
-	if (data2 != 0x00) continue;
-	data3 = (char) (pio_sm_get_blocking(pio, sm));
-	if (data3 != 0x00) continue;
-	data4 = (char) (pio_sm_get_blocking(pio, sm));
-	if (data4 != 0x01) continue;
+        // keep shifting miso and mosi bytes into 8 byte
+        // message storage variables
 
-	data = (char) pio_sm_get_blocking(pio,sm);
-	break;
+        if (init) {
+            mosi_msg = mosi_msg | mosi_byte;
+            miso_msg = miso_msg | miso_byte;    
+        }else{
+            mosi_msg = (mosi_msg << 8) | mosi_byte;
+            miso_msg = (miso_msg << 8) | miso_byte;
+        }
+        init = false;
+        
+        // search for fifo_0 read signature 0xD40024
+        if (!((mosi_msg & 0x00000000ff00ff00) == 0x00D4002400)) continue;
+        
+        // return miso result byte
+        char message = (char) (miso_msg & 0xff);
+        return message;
     }
-    return data;
 }
 
 
@@ -131,7 +159,8 @@ static inline uint32_t fetch_lpc_message(PIO pio, uint sm) {
 }
 
 static const char vmk_header[] = {
-    0x2c, 0x00, 0x00, 0x0, 0x01, 0x00, 0x00, 0x00, 0x03, 0x20, 0x00, 0x00
+    0x2c, 0x00, 0x05, 0x0, 0x01, 0x00, 0x00, 0x00, 0x03, 0x20, 0x00, 0x00
+    //0x2c, 0x00, 0x00, 0x0, 0x01, 0x00, 0x00, 0x00, 0x03, 0x20, 0x00, 0x00
 };
 
 #define MAXCOUNT 512
@@ -141,7 +170,7 @@ uint32_t buf[MAXCOUNT];
 char message_buffer[4096*2];
 volatile size_t msg_buffer_ptr = 0;
 
-void fetch_lpc(PIO pio, uint sm)
+static inline void fetch_lpc(PIO pio, uint sm)
 {
     while(1) {
         uint32_t message = fetch_lpc_message(pio, sm);
@@ -157,23 +186,21 @@ void fetch_lpc(PIO pio, uint sm)
     }
 }
 
-void fetch_spi(PIO pio, uint sm)
+static inline void fetch_spi(PIO pio, uint sm)
 {
     printf("[SPI protocol selection]\n");
     while(1) {
         char message = fetch_spi_message(pio, sm);
-	    if (message == 0x2c){
-	        multicore_fifo_push_blocking(msg_buffer_ptr+1);
-	        for (int i = 0; i < 44; i++){
-	    	    message_buffer[msg_buffer_ptr++] = message;
-		        message = fetch_spi_message(pio, sm);
-            }
-	        message_buffer[msg_buffer_ptr++] = message;
+	    if (!(message == 0x2c)) continue;
+	    message_buffer[msg_buffer_ptr++] = message;
+        multicore_fifo_push_blocking(msg_buffer_ptr);
+	    for (int i = 0; i < 44; i++){
+	        message_buffer[msg_buffer_ptr++] = fetch_spi_message(pio, sm);
 	    }
 	}
 }
 
-void fetch_spi_bios(PIO pio, uint sm)
+static inline void fetch_spi_bios(PIO pio, uint sm)
 {
     fetch_spi(pio, sm);
 }
@@ -194,21 +221,21 @@ void core1_entry()
 	    case SPI:
 	        offset = pio_add_program(pio, &spi_sniffer_program);
 	        sm = pio_claim_unused_sm(pio, true);
-	        spi_sniffer_program_init(pio, sm, offset, 2, 4);
+	        spi_sniffer_program_init(pio, sm, offset, 2, 5);
 	        fetch_spi(pio, sm);
 	        break;
 	    case SPI_BIOS:
 	        offset = pio_add_program(pio, &spi_bios_sniffer_program);
 	        sm = pio_claim_unused_sm(pio, true);
-	        spi_bios_sniffer_program_init(pio, sm, offset, 2, 4);
+	        spi_bios_sniffer_program_init(pio, sm, offset, 2, 5);
             fetch_spi_bios(pio, sm);
-	    break;
+	        break;
 	    default:
 	        offset = pio_add_program(pio, &spi_bios_sniffer_program);
 	        sm = pio_claim_unused_sm(pio, true);
-	        spi_bios_sniffer_program_init(pio, sm, offset, 2, 4);
+	        spi_bios_sniffer_program_init(pio, sm, offset, 2, 5);
 	        fetch_spi_bios(pio, sm);
-	    break;
+	        break;
 	}
 }
 

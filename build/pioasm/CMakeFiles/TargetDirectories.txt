@@ -1,0 +1,3 @@
+/home/pico/pico/projects/pico-tpmsniffer/build/pioasm/CMakeFiles/pioasm.dir
+/home/pico/pico/projects/pico-tpmsniffer/build/pioasm/CMakeFiles/edit_cache.dir
+/home/pico/pico/projects/pico-tpmsniffer/build/pioasm/CMakeFiles/rebuild_cache.dir
