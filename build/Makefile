@@ -143,19 +143,6 @@ tpm_sniffer_lpc_sniffer_pio_h/fast:
 .PHONY : tpm_sniffer_lpc_sniffer_pio_h/fast
 
 #=============================================================================
-# Target rules for targets named tpm_sniffer_spi_sniffer_pio_h
-
-# Build rule for target.
-tpm_sniffer_spi_sniffer_pio_h: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tpm_sniffer_spi_sniffer_pio_h
-.PHONY : tpm_sniffer_spi_sniffer_pio_h
-
-# fast build rule for target.
-tpm_sniffer_spi_sniffer_pio_h/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/build.make CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/build
-.PHONY : tpm_sniffer_spi_sniffer_pio_h/fast
-
-#=============================================================================
 # Target rules for targets named tpm_sniffer_spi_bios_sniffer_pio_h
 
 # Build rule for target.
@@ -1813,7 +1800,6 @@ help:
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... tpm_sniffer_lpc_sniffer_pio_h"
 	@echo "... tpm_sniffer_spi_bios_sniffer_pio_h"
-	@echo "... tpm_sniffer_spi_sniffer_pio_h"
 	@echo "... bs2_default"
 	@echo "... tpm_sniffer"
 	@echo "... home/pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"

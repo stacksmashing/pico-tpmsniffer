@@ -10,10 +10,11 @@
 
 // Our assembled program:
 #include "lpc_sniffer.pio.h"
-#include "spi_sniffer.pio.h"
+//#include "spi_sniffer.pio.h"
 #include "spi_bios_sniffer.pio.h"
 
 #include "hardware/flash.h"
+
 
 enum SNIFF_PROTOCOL {
 	LPC,
@@ -186,7 +187,7 @@ static inline void fetch_lpc(PIO pio, uint sm)
     }
 }
 
-static inline void fetch_spi(PIO pio, uint sm)
+static inline void fetch_spi_bios(PIO pio, uint sm)
 {
     printf("[SPI protocol selection]\n");
     while(1) {
@@ -200,10 +201,6 @@ static inline void fetch_spi(PIO pio, uint sm)
 	}
 }
 
-static inline void fetch_spi_bios(PIO pio, uint sm)
-{
-    fetch_spi(pio, sm);
-}
 
 void core1_entry() 
 {
@@ -218,12 +215,6 @@ void core1_entry()
             lpc_sniffer_program_init(pio, sm, offset, 1, 10);
             fetch_lpc(pio, sm);
 	    break;
-	    case SPI:
-	        offset = pio_add_program(pio, &spi_sniffer_program);
-	        sm = pio_claim_unused_sm(pio, true);
-	        spi_sniffer_program_init(pio, sm, offset, 2, 5);
-	        fetch_spi(pio, sm);
-	        break;
 	    case SPI_BIOS:
 	        offset = pio_add_program(pio, &spi_bios_sniffer_program);
 	        sm = pio_claim_unused_sm(pio, true);

@@ -76,6 +76,5 @@ CMakeFiles/tpm_sniffer.dir/main.c.obj: \
  /home/pico/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
  /home/pico/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
  /home/pico/pico/projects/pico-tpmsniffer/build/lpc_sniffer.pio.h \
- /home/pico/pico/projects/pico-tpmsniffer/build/spi_sniffer.pio.h \
  /home/pico/pico/projects/pico-tpmsniffer/build/spi_bios_sniffer.pio.h \
  /home/pico/pico/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h

@@ -3,7 +3,6 @@ c83c3f6fe73968512fbc86ce661ea652 CMakeFiles/ELF2UF2Build
 074bfbd6e7bfed47a16b802a327fdc85 CMakeFiles/ELF2UF2Build-complete
 c83c3f6fe73968512fbc86ce661ea652 CMakeFiles/tpm_sniffer_lpc_sniffer_pio_h
 c83c3f6fe73968512fbc86ce661ea652 CMakeFiles/tpm_sniffer_spi_bios_sniffer_pio_h
-c83c3f6fe73968512fbc86ce661ea652 CMakeFiles/tpm_sniffer_spi_sniffer_pio_h
 8fa9a1af6a1041cb50a9f67fefe68c7f elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-build
 592b50984538493170fd1e2b0e46d12e elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure
 261d33416beccf467f8ab0b6679dff72 elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-download
@@ -28,4 +27,3 @@ f6bd5308d60001e61306a826930078b3 pico-sdk/src/rp2_common/pico_cyw43_driver/pioas
 04c02ebb3ae4c672d045418ffc9e7ffc pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch
 712c2f9663481825195e38b1fc01c405 pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update
 fc58aa394ab20e9a57cc04720611e37b spi_bios_sniffer.pio.h
-4ad15d985f474e6a4fec9cb77d8c686c spi_sniffer.pio.h

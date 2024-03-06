@@ -1,6 +1,5 @@
 /home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles/tpm_sniffer.dir
 /home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles/tpm_sniffer_lpc_sniffer_pio_h.dir
-/home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir
 /home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles/tpm_sniffer_spi_bios_sniffer_pio_h.dir
 /home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles/ELF2UF2Build.dir
 /home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles/edit_cache.dir

@@ -12,12 +12,13 @@
 
 entry:
     wait 1 pin 3
-	wait 0 pin 3			; wait for SCK to go High
 .wrap_target
+wait_select:
+	wait 0 pin 3			; wait for SCK to go low
 clock_cycle:
 	wait 0 pin 2			; wait for clock low
 	wait 1 pin 2			; wait for clock high (sample @ rising edge)
-	jmp pin clock_cycle; make sure SCK is still high before sampling bit
+	jmp pin wait_select     ; make sure SeLECT is still low before sampling bit
 sample_bits:
 	in pins, 2			    ; sample data bit from DO and DI 
 .wrap 

@@ -1203,9 +1203,9 @@ Discarded input sections
                 0x00000000        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .bss.lockout_victim_initialized
                 0x00000000        0x2 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- .text          0x00000000        0x0 /tmp/ccZUZGP7.o
- .data          0x00000000        0x0 /tmp/ccZUZGP7.o
- .bss           0x00000000        0x0 /tmp/ccZUZGP7.o
+ .text          0x00000000        0x0 /tmp/cc6sztYH.o
+ .data          0x00000000        0x0 /tmp/cc6sztYH.o
+ .bss           0x00000000        0x0 /tmp/cc6sztYH.o
  .data          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x00000000       0x10 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-atexit.o)
@@ -1471,11 +1471,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
 .boot2          0x10000000      0x100
                 0x10000000                        __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 /tmp/ccZUZGP7.o
+ .boot2         0x10000000      0x100 /tmp/cc6sztYH.o
                 0x10000100                        __boot2_end__ = .
                 0x00000001                        ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x7c60
+.text           0x10000100     0x7b58
                 0x10000100                        __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1538,649 +1538,649 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  .text          0x100002bc       0x98 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
  .text.spi_bios_sniffer_program_init.constprop.0
                 0x10000354       0xc8 CMakeFiles/tpm_sniffer.dir/main.c.obj
- .text.fetch_spi.constprop.0
+ .text.fetch_spi_bios.constprop.0
                 0x1000041c      0x248 CMakeFiles/tpm_sniffer.dir/main.c.obj
  .text.core1_entry
-                0x10000664      0x360 CMakeFiles/tpm_sniffer.dir/main.c.obj
+                0x10000664      0x258 CMakeFiles/tpm_sniffer.dir/main.c.obj
                 0x10000664                core1_entry
  .text.startup.main
-                0x100009c4      0x190 CMakeFiles/tpm_sniffer.dir/main.c.obj
-                0x100009c4                main
+                0x100008bc      0x190 CMakeFiles/tpm_sniffer.dir/main.c.obj
+                0x100008bc                main
  .text.set_sys_clock_pll
-                0x10000b54       0x78 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-                0x10000b54                set_sys_clock_pll
+                0x10000a4c       0x78 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+                0x10000a4c                set_sys_clock_pll
  .text.check_sys_clock_khz
-                0x10000bcc      0x210 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-                0x10000bcc                check_sys_clock_khz
+                0x10000ac4      0x210 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+                0x10000ac4                check_sys_clock_khz
  .text.gpio_set_function
-                0x10000ddc       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000ddc                gpio_set_function
+                0x10000cd4       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10000cd4                gpio_set_function
  .text.running_on_fpga
-                0x10000e0c       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x10000e0c                running_on_fpga
+                0x10000d04       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x10000d04                running_on_fpga
  .text.hw_claim_lock
-                0x10000e1c       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000e1c                hw_claim_lock
+                0x10000d14       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000d14                hw_claim_lock
  .text.hw_claim_unlock
-                0x10000e34       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000e34                hw_claim_unlock
+                0x10000d2c       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000d2c                hw_claim_unlock
  .text.hw_claim_or_assert
-                0x10000e48       0x44 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000e48                hw_claim_or_assert
+                0x10000d40       0x44 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000d40                hw_claim_or_assert
  .text.hw_claim_unused_from_range
-                0x10000e8c       0x9c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000e8c                hw_claim_unused_from_range
+                0x10000d84       0x9c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000d84                hw_claim_unused_from_range
  .text.spin_locks_reset
-                0x10000f28       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10000f28                spin_locks_reset
+                0x10000e20       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000e20                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x10000f44       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10000f44                next_striped_spin_lock_num
+                0x10000e3c       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000e3c                next_striped_spin_lock_num
  .text.spin_lock_claim_unused
-                0x10000f5c       0x24 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10000f5c                spin_lock_claim_unused
+                0x10000e54       0x24 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000e54                spin_lock_claim_unused
  .text.irq_set_enabled
-                0x10000f80       0x24 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000f80                irq_set_enabled
+                0x10000e78       0x24 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000e78                irq_set_enabled
  .text.irq_is_enabled
-                0x10000fa4       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000fa4                irq_is_enabled
+                0x10000e9c       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000e9c                irq_is_enabled
  .text.irq_set_pending
-                0x10000fbc       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000fbc                irq_set_pending
+                0x10000eb4       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000eb4                irq_set_pending
  .text.irq_has_shared_handler
-                0x10000fcc       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000fcc                irq_has_shared_handler
+                0x10000ec4       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000ec4                irq_has_shared_handler
  .text.irq_get_vtable_handler
-                0x10000ff8       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000ff8                irq_get_vtable_handler
+                0x10000ef0       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000ef0                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x10001008       0x54 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001008                irq_set_exclusive_handler
+                0x10000f00       0x54 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000f00                irq_set_exclusive_handler
  .text.irq_add_shared_handler
-                0x1000105c      0x1f4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x1000105c                irq_add_shared_handler
+                0x10000f54      0x1f4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000f54                irq_add_shared_handler
  .text.irq_remove_handler
-                0x10001250      0x1c4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001250                irq_remove_handler
+                0x10001148      0x1c4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001148                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x10001414       0xb4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001414                irq_add_tail_to_free_list
+                0x1000130c       0xb4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000130c                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x100014c8       0x24 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100014c8                irq_init_priorities
+                0x100013c0       0x24 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100013c0                irq_init_priorities
  .text.user_irq_claim_unused
-                0x100014ec       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100014ec                user_irq_claim_unused
+                0x100013e4       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100013e4                user_irq_claim_unused
  .text.lock_init
-                0x10001518       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x10001518                lock_init
+                0x10001410       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x10001410                lock_init
  .text.mutex_init
-                0x10001528       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10001528                mutex_init
+                0x10001420       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10001420                mutex_init
  .text.recursive_mutex_init
-                0x10001544       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10001544                recursive_mutex_init
+                0x1000143c       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x1000143c                recursive_mutex_init
  .text.critical_section_init
-                0x10001560       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x10001560                critical_section_init
+                0x10001458       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x10001458                critical_section_init
  .text.critical_section_init_with_lock_num
-                0x1000157c       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x1000157c                critical_section_init_with_lock_num
+                0x10001474       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x10001474                critical_section_init_with_lock_num
  .text.timer_pool_entry_comparator
-                0x10001590       0x34 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001590                timer_pool_entry_comparator
+                0x10001488       0x34 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001488                timer_pool_entry_comparator
  .text.sleep_until_callback
-                0x100015c4       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100014bc       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock.isra.0
-                0x100015f4      0x100 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100014ec      0x100 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x100016f4      0x1c0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100015ec      0x1c0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x100018b4       0x6c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x100018b4                alarm_pool_init_default
+                0x100017ac       0x6c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100017ac                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x10001920        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001920                alarm_pool_get_default
+                0x10001818        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001818                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x10001928      0x188 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001928                alarm_pool_add_alarm_at
+                0x10001820      0x188 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001820                alarm_pool_add_alarm_at
  .text.alarm_pool_core_num
-                0x10001ab0        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001ab0                alarm_pool_core_num
+                0x100019a8        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100019a8                alarm_pool_core_num
  .text.sleep_until
-                0x10001ab4       0xc4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001ab4                sleep_until
+                0x100019ac       0xc4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100019ac                sleep_until
  .text.sleep_ms
-                0x10001b78       0x38 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001b78                sleep_ms
+                0x10001a70       0x38 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001a70                sleep_ms
  .text.best_effort_wfe_or_timeout
-                0x10001bb0       0xec CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001bb0                best_effort_wfe_or_timeout
+                0x10001aa8       0xec CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001aa8                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x10001c9c       0xbc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001b94       0xbc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x10001d58       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001d58                hardware_alarm_claim
+                0x10001c50       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001c50                hardware_alarm_claim
  .text.time_us_64
-                0x10001d70       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001d70                time_us_64
+                0x10001c68       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001c68                time_us_64
  .text.busy_wait_us
-                0x10001d84       0x68 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001d84                busy_wait_us
+                0x10001c7c       0x68 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001c7c                busy_wait_us
  .text.busy_wait_until
-                0x10001dec       0x20 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001dec                busy_wait_until
+                0x10001ce4       0x20 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001ce4                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x10001e0c       0x8c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001e0c                hardware_alarm_set_callback
+                0x10001d04       0x8c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001d04                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x10001e98       0xd0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001e98                hardware_alarm_set_target
+                0x10001d90       0xd0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001d90                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x10001f68       0x3c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001f68                hardware_alarm_cancel
+                0x10001e60       0x3c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001e60                hardware_alarm_cancel
  .text.ph_merge_nodes
-                0x10001fa4       0x64 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001e9c       0x64 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x10002008       0x3c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10002008                ph_post_alloc_init
+                0x10001f00       0x3c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001f00                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x10002044       0x98 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10002044                ph_merge_two_pass
+                0x10001f3c       0x98 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001f3c                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x100020dc      0x100 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001fd4      0x100 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x100021dc      0x104 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100021dc                ph_remove_head
+                0x100020d4      0x104 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100020d4                ph_remove_head
  .text.ph_remove_and_free_node
-                0x100022e0       0x78 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100022e0                ph_remove_and_free_node
+                0x100021d8       0x78 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100021d8                ph_remove_and_free_node
  .text.uart_init
-                0x10002358      0x188 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x10002358                uart_init
+                0x10002250      0x188 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x10002250                uart_init
  .text.clock_configure
-                0x100024e0      0x114 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x100024e0                clock_configure
+                0x100023d8      0x114 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x100023d8                clock_configure
  .text.clocks_init
-                0x100025f4      0x2c8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x100025f4                clocks_init
+                0x100024ec      0x2c8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x100024ec                clocks_init
  .text.clock_get_hz
-                0x100028bc        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x100028bc                clock_get_hz
+                0x100027b4        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x100027b4                clock_get_hz
  .text.pll_init
-                0x100028c8       0xa0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x100028c8                pll_init
+                0x100027c0       0xa0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x100027c0                pll_init
  .text.watchdog_start_tick
-                0x10002968       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x10002968                watchdog_start_tick
+                0x10002860       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10002860                watchdog_start_tick
  .text.watchdog_reboot
-                0x10002978       0x9c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x10002978                watchdog_reboot
+                0x10002870       0x9c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10002870                watchdog_reboot
  .text.xosc_init
-                0x10002a14       0x28 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x10002a14                xosc_init
+                0x1000290c       0x28 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x1000290c                xosc_init
  .text.runtime_init
-                0x10002a3c       0xf0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002a3c                runtime_init
- .text._exit    0x10002b2c        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002b2c                _exit
- .text.exit     0x10002b30        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002b30                exit
- .text.panic    0x10002b38       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002b38                panic
+                0x10002934       0xf0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002934                runtime_init
+ .text._exit    0x10002a24        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002a24                _exit
+ .text.exit     0x10002a28        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002a28                exit
+ .text.panic    0x10002a30       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002a30                panic
  .text.hard_assertion_failure
-                0x10002b68        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002b68                hard_assertion_failure
+                0x10002a60        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002a60                hard_assertion_failure
  .text._out_null
-                0x10002b74        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002a6c        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x10002b78       0x90 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002a70       0x90 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x10002c08      0x1f4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002b00      0x1f4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_char
-                0x10002dfc       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002cf4       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x10002e0c       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._etoa    0x10002e1c      0x454 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x10003270      0x3c4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002d04       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._etoa    0x10002d14      0x454 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x10003168      0x3c4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x10003634      0xb24 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000352c      0xb24 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.vfctprintf
-                0x10004158       0x20 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x10004158                vfctprintf
+                0x10004050       0x20 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10004050                vfctprintf
  .text.weak_raw_vprintf
-                0x10004178       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x10004178                weak_raw_vprintf
- .text          0x100041a8       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x10004070       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10004070                weak_raw_vprintf
+ .text          0x100040a0       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x100041b8       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x100041b8                rom_func_lookup
+                0x100040b0       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100040b0                rom_func_lookup
  .text.rom_data_lookup
-                0x100041c8       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x100041c8                rom_data_lookup
+                0x100040c0       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100040c0                rom_data_lookup
  .text.rom_funcs_lookup
-                0x100041d8       0x44 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x100041d8                rom_funcs_lookup
+                0x100040d0       0x44 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100040d0                rom_funcs_lookup
  .text.__wrap___aeabi_idiv
-                0x1000421c       0x50 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x1000421c                __wrap___aeabi_idivmod
-                0x1000421c                divmod_s32s32
-                0x1000421c                div_s32s32
-                0x1000421c                __wrap___aeabi_idiv
-                0x10004224                divmod_s32s32_unsafe
-                0x10004250                divmod_s32s32_savestate
+                0x10004114       0x50 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10004114                __wrap___aeabi_idivmod
+                0x10004114                divmod_s32s32
+                0x10004114                div_s32s32
+                0x10004114                __wrap___aeabi_idiv
+                0x1000411c                divmod_s32s32_unsafe
+                0x10004148                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x1000426c       0x4c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x1000426c                __wrap___aeabi_uidiv
-                0x1000426c                __wrap___aeabi_uidivmod
-                0x1000426c                div_u32u32
-                0x1000426c                divmod_u32u32
-                0x10004274                divmod_u32u32_unsafe
-                0x1000429c                divmod_u32u32_savestate
+                0x10004164       0x4c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10004164                __wrap___aeabi_uidiv
+                0x10004164                __wrap___aeabi_uidivmod
+                0x10004164                div_u32u32
+                0x10004164                divmod_u32u32
+                0x1000416c                divmod_u32u32_unsafe
+                0x10004194                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x100042b8      0x424 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x100042b8                div_s64s64
-                0x100042b8                divmod_s64s64
-                0x100042b8                __wrap___aeabi_ldivmod
-                0x100042e8                div_u64u64
-                0x100042e8                divmod_u64u64
-                0x100042e8                __wrap___aeabi_uldivmod
-                0x100042f8                divmod_u64u64_savestate
-                0x10004318                divmod_s64s64_unsafe
-                0x100043a0                divmod_u64u64_unsafe
+                0x100041b0      0x424 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x100041b0                div_s64s64
+                0x100041b0                divmod_s64s64
+                0x100041b0                __wrap___aeabi_ldivmod
+                0x100041e0                div_u64u64
+                0x100041e0                divmod_u64u64
+                0x100041e0                __wrap___aeabi_uldivmod
+                0x100041f0                divmod_u64u64_savestate
+                0x10004210                divmod_s64s64_unsafe
+                0x10004298                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x100046dc       0x80 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100046dc                __wrap___aeabi_drsub
-                0x100046e2                __wrap___aeabi_dsub
-                0x100046f4                __wrap___aeabi_dadd
-                0x10004706                __wrap___aeabi_ddiv
-                0x10004742                __wrap___aeabi_dmul
+                0x100045d4       0x80 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100045d4                __wrap___aeabi_drsub
+                0x100045da                __wrap___aeabi_dsub
+                0x100045ec                __wrap___aeabi_dadd
+                0x100045fe                __wrap___aeabi_ddiv
+                0x1000463a                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x1000475c       0x6c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000475c                __wrap___aeabi_cdrcmple
-                0x1000476c                __wrap___aeabi_cdcmple
-                0x1000476c                __wrap___aeabi_cdcmpeq
+                0x10004654       0x6c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10004654                __wrap___aeabi_cdrcmple
+                0x10004664                __wrap___aeabi_cdcmple
+                0x10004664                __wrap___aeabi_cdcmpeq
  .text.__wrap___aeabi_dcmplt
-                0x100047c8        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100047c8                __wrap___aeabi_dcmplt
+                0x100046c0        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100046c0                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmpge
-                0x100047d4       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100047d4                __wrap___aeabi_dcmpge
+                0x100046cc       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100046cc                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x100047e4        0xa CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100047e4                __wrap___aeabi_dcmpgt
+                0x100046dc        0xa CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100046dc                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x100047ee       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100047ee                __wrap___aeabi_dcmpun
- *fill*         0x1000480a        0x2 
+                0x100046e6       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100046e6                __wrap___aeabi_dcmpun
+ *fill*         0x10004702        0x2 
  .text.__wrap___aeabi_i2d
-                0x1000480c       0x38 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000480c                __wrap___aeabi_ui2d
-                0x10004814                __wrap___aeabi_i2d
+                0x10004704       0x38 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10004704                __wrap___aeabi_ui2d
+                0x1000470c                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x10004844       0x48 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10004844                __wrap___aeabi_d2iz
-                0x10004844                double2int_z
+                0x1000473c       0x48 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x1000473c                __wrap___aeabi_d2iz
+                0x1000473c                double2int_z
  .text.__wrap___aeabi_d2uiz
-                0x1000488c       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000488c                double2uint
-                0x1000488c                __wrap___aeabi_d2uiz
+                0x10004784       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10004784                double2uint
+                0x10004784                __wrap___aeabi_d2uiz
  .text.__aeabi_double_init
-                0x100048a4       0x98 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x100048a4                __aeabi_double_init
+                0x1000479c       0x98 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x1000479c                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x1000493c       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x1000493c                double_table_shim_on_use_helper
+                0x10004834       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004834                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x10004968       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004968                drsub_shim
-                0x1000496e                dsub_shim
+                0x10004860       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004860                drsub_shim
+                0x10004866                dsub_shim
  .text.dadd_shim
-                0x10004978      0x15c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004978                dadd_shim
+                0x10004870      0x15c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004870                dadd_shim
  .text.dmul_shim
-                0x10004ad4      0x15c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004ad4                dmul_shim
+                0x100049cc      0x15c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100049cc                dmul_shim
  .text.ddiv_shim
-                0x10004c30      0x1b0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004c30                ddiv_shim
+                0x10004b28      0x1b0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004b28                ddiv_shim
  .text.double2uint_shim
-                0x10004de0        0xe CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004de0                double2uint_shim
-                0x10004de2                double2ufix_shim
- *fill*         0x10004dee        0x2 
+                0x10004cd8        0xe CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004cd8                double2uint_shim
+                0x10004cda                double2ufix_shim
+ *fill*         0x10004ce6        0x2 
  .text.double2uint64_shim
-                0x10004df0       0x70 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004df0                double2uint64_shim
-                0x10004df2                double2ufix64_shim
-                0x10004e12                d2fix_a
+                0x10004ce8       0x70 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004ce8                double2uint64_shim
+                0x10004cea                double2ufix64_shim
+                0x10004d0a                d2fix_a
  .text.dunpacks
-                0x10004e60       0x3c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004e60                dunpacks
+                0x10004d58       0x3c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004d58                dunpacks
  .text.__aeabi_lmul
-                0x10004e9c       0x32 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x10004e9c                __wrap___aeabi_lmul
- *fill*         0x10004ece        0x2 
+                0x10004d94       0x32 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x10004d94                __wrap___aeabi_lmul
+ *fill*         0x10004dc6        0x2 
  .text.__wrap___aeabi_farithmetic
-                0x10004ed0       0x48 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10004ed0                __wrap___aeabi_frsub
-                0x10004ed6                __wrap___aeabi_fsub
-                0x10004edc                __wrap___aeabi_fadd
-                0x10004ee2                __wrap___aeabi_fdiv
-                0x10004f0a                __wrap___aeabi_fmul
+                0x10004dc8       0x48 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10004dc8                __wrap___aeabi_frsub
+                0x10004dce                __wrap___aeabi_fsub
+                0x10004dd4                __wrap___aeabi_fadd
+                0x10004dda                __wrap___aeabi_fdiv
+                0x10004e02                __wrap___aeabi_fmul
  .text.__wrap___aeabi_ui2f
-                0x10004f18        0xa CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10004f18                __wrap___aeabi_ui2f
- *fill*         0x10004f22        0x2 
+                0x10004e10        0xa CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10004e10                __wrap___aeabi_ui2f
+ *fill*         0x10004e1a        0x2 
  .text.__wrap___aeabi_i2f
-                0x10004f24       0x44 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10004f24                __wrap___aeabi_i2f
+                0x10004e1c       0x44 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10004e1c                __wrap___aeabi_i2f
  .text.__wrap___aeabi_f2uiz
-                0x10004f68        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10004f68                __wrap___aeabi_f2uiz
+                0x10004e60        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10004e60                __wrap___aeabi_f2uiz
  .text.__aeabi_float_init
-                0x10004f74       0x64 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x10004f74                __aeabi_float_init
+                0x10004e6c       0x64 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10004e6c                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x10004fd8       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x10004fd8                float_table_shim_on_use_helper
- .text          0x10005004       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10005004                __aeabi_mem_init
- .text.memset   0x10005014        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10005014                __wrap_memset
- .text.memcpy   0x10005020        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10005020                __wrap___aeabi_memcpy
-                0x10005020                __wrap_memcpy
+                0x10004ed0       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x10004ed0                float_table_shim_on_use_helper
+ .text          0x10004efc       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10004efc                __aeabi_mem_init
+ .text.memset   0x10004f0c        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10004f0c                __wrap_memset
+ .text.memcpy   0x10004f18        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10004f18                __wrap___aeabi_memcpy
+                0x10004f18                __wrap_memcpy
  .text.stdio_out_chars_crlf
-                0x1000502c       0xbc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004f24       0xbc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x100050e8       0x64 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004fe0       0x64 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x1000514c       0x98 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x1000514c                __wrap_putchar
+                0x10005044       0x98 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10005044                __wrap_putchar
  .text.__wrap_puts
-                0x100051e4       0xe0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100051e4                __wrap_puts
+                0x100050dc       0xe0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100050dc                __wrap_puts
  .text.stdio_set_driver_enabled
-                0x100052c4       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100052c4                stdio_set_driver_enabled
+                0x100051bc       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100051bc                stdio_set_driver_enabled
  .text.__wrap_vprintf
-                0x100052f4       0xd4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100052f4                __wrap_vprintf
+                0x100051ec       0xd4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100051ec                __wrap_vprintf
  .text.__wrap_printf
-                0x100053c8       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100053c8                __wrap_printf
+                0x100052c0       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100052c0                __wrap_printf
  .text.stdio_init_all
-                0x100053e0       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100053e0                stdio_init_all
+                0x100052d8       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100052d8                stdio_init_all
  .text.stdio_uart_out_chars
-                0x100053f0       0x4c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100052e8       0x4c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_in_chars
-                0x1000543c       0x98 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x1000543c                stdio_uart_in_chars
+                0x10005334       0x98 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10005334                stdio_uart_in_chars
  .text.on_uart_rx
-                0x100054d4       0x28 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100053cc       0x28 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_set_chars_available_callback
-                0x100054fc       0x8c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100053f4       0x8c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_init
-                0x10005588       0x48 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10005588                stdio_uart_init
+                0x10005480       0x48 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10005480                stdio_uart_init
  .text.resetd_init
-                0x100055d0        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x100054c8        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_reset
-                0x100055d4        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x100054cc        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_open
-                0x100055e0       0x28 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x100054d8       0x28 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_xfer_cb
-                0x10005608        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10005500        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_control_xfer_cb
-                0x1000560c       0x60 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10005504       0x60 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.usbd_app_driver_get_cb
-                0x1000566c        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x1000566c                usbd_app_driver_get_cb
+                0x10005564        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10005564                usbd_app_driver_get_cb
  .text.tud_cdc_line_coding_cb
-                0x10005678       0x34 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x10005678                tud_cdc_line_coding_cb
+                0x10005570       0x34 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10005570                tud_cdc_line_coding_cb
  .text.stdio_usb_set_chars_available_callback
-                0x100056ac       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x100056ac                stdio_usb_set_chars_available_callback
- .text.usb_irq  0x100056c0       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x100055a4       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x100055a4                stdio_usb_set_chars_available_callback
+ .text.usb_irq  0x100055b8       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.timer_task
-                0x100056d0       0x54 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x100055c8       0x54 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.stdio_usb_in_chars
-                0x10005724       0x90 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x10005724                stdio_usb_in_chars
+                0x1000561c       0x90 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x1000561c                stdio_usb_in_chars
  .text.stdio_usb_out_chars
-                0x100057b4      0x104 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x100056ac      0x104 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.low_priority_worker_irq
-                0x100058b8       0xa8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x100057b0       0xa8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.tud_cdc_rx_cb
-                0x10005960       0x20 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x10005960                tud_cdc_rx_cb
+                0x10005858       0x20 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10005858                tud_cdc_rx_cb
  .text.stdio_usb_init
-                0x10005980       0xe0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x10005980                stdio_usb_init
+                0x10005878       0xe0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10005878                stdio_usb_init
  .text.tud_descriptor_device_cb
-                0x10005a60        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x10005a60                tud_descriptor_device_cb
+                0x10005958        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x10005958                tud_descriptor_device_cb
  .text.tud_descriptor_configuration_cb
-                0x10005a68        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x10005a68                tud_descriptor_configuration_cb
+                0x10005960        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x10005960                tud_descriptor_configuration_cb
  .text.tud_descriptor_string_cb
-                0x10005a70       0x78 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x10005a70                tud_descriptor_string_cb
+                0x10005968       0x78 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x10005968                tud_descriptor_string_cb
  .text.startup._retrieve_unique_id_on_boot
-                0x10005ae8       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x100059e0       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .text.pico_get_unique_board_id_string
-                0x10005af8      0x1a8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x10005af8                pico_get_unique_board_id_string
+                0x100059f0      0x1a8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x100059f0                pico_get_unique_board_id_string
  .text.flash_get_unique_id
-                0x10005ca0       0x40 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-                0x10005ca0                flash_get_unique_id
+                0x10005b98       0x40 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x10005b98                flash_get_unique_id
  .text.dcd_int_enable
-                0x10005ce0        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10005ce0                dcd_int_enable
+                0x10005bd8        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005bd8                dcd_int_enable
  .text.dcd_set_address
-                0x10005cec       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10005cec                dcd_set_address
+                0x10005be4       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005be4                dcd_set_address
  .text.dcd_connect
-                0x10005d00       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10005d00                dcd_connect
+                0x10005bf8       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005bf8                dcd_connect
  .text.dcd_init
-                0x10005d10       0x98 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10005d10                dcd_init
+                0x10005c08       0x98 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005c08                dcd_init
  .text.dcd_edpt0_status_complete
-                0x10005da8       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10005da8                dcd_edpt0_status_complete
+                0x10005ca0       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005ca0                dcd_edpt0_status_complete
  .text.dcd_edpt_open
-                0x10005dc4      0x108 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10005dc4                dcd_edpt_open
+                0x10005cbc      0x108 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005cbc                dcd_edpt_open
  .text.dcd_edpt_close_all
-                0x10005ecc        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10005ecc                dcd_edpt_close_all
+                0x10005dc4        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005dc4                dcd_edpt_close_all
  .text.dcd_edpt_xfer
-                0x10005ed4       0x24 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10005ed4                dcd_edpt_xfer
+                0x10005dcc       0x24 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005dcc                dcd_edpt_xfer
  .text.dcd_edpt_stall
-                0x10005ef8       0x38 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10005ef8                dcd_edpt_stall
+                0x10005df0       0x38 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005df0                dcd_edpt_stall
  .text.dcd_edpt_clear_stall
-                0x10005f30       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10005f30                dcd_edpt_clear_stall
+                0x10005e28       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10005e28                dcd_edpt_clear_stall
  .text.rp2040_usb_init
-                0x10005f60       0x4c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x10005f60                rp2040_usb_init
+                0x10005e58       0x4c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x10005e58                rp2040_usb_init
  .text.hw_endpoint_xfer_start
-                0x10005fac       0x40 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x10005fac                hw_endpoint_xfer_start
+                0x10005ea4       0x40 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x10005ea4                hw_endpoint_xfer_start
  .text.tud_mounted
-                0x10005fec       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005fec                tud_mounted
+                0x10005ee4       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005ee4                tud_mounted
  .text.tud_suspended
-                0x10005ffc       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10005ffc                tud_suspended
+                0x10005ef4       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005ef4                tud_suspended
  .text.tud_inited
-                0x1000600c       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x1000600c                tud_inited
+                0x10005f04       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005f04                tud_inited
  .text.tud_init
-                0x10006020       0xd8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10006020                tud_init
+                0x10005f18       0xd8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005f18                tud_init
  .text.tud_task_ext
-                0x100060f8      0x8a8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x100060f8                tud_task_ext
+                0x10005ff0      0x8a8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10005ff0                tud_task_ext
  .text.usbd_open_edpt_pair
-                0x100069a0       0x9c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x100069a0                usbd_open_edpt_pair
+                0x10006898       0x9c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10006898                usbd_open_edpt_pair
  .text.usbd_defer_func
-                0x10006a3c       0x48 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10006a3c                usbd_defer_func
+                0x10006934       0x48 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10006934                usbd_defer_func
  .text.usbd_edpt_open
-                0x10006a84       0x34 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10006a84                usbd_edpt_open
+                0x1000697c       0x34 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x1000697c                usbd_edpt_open
  .text.usbd_edpt_claim
-                0x10006ab8       0x28 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10006ab8                usbd_edpt_claim
+                0x100069b0       0x28 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100069b0                usbd_edpt_claim
  .text.usbd_edpt_release
-                0x10006ae0       0x28 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10006ae0                usbd_edpt_release
+                0x100069d8       0x28 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100069d8                usbd_edpt_release
  .text.usbd_edpt_xfer
-                0x10006b08       0x4c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10006b08                usbd_edpt_xfer
+                0x10006a00       0x4c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10006a00                usbd_edpt_xfer
  .text.tud_control_status
-                0x10006b54       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x10006b54                tud_control_status
+                0x10006a4c       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10006a4c                tud_control_status
  .text.tud_control_xfer
-                0x10006b80       0xac CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x10006b80                tud_control_xfer
+                0x10006a78       0xac CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10006a78                tud_control_xfer
  .text.usbd_control_reset
-                0x10006c2c       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x10006c2c                usbd_control_reset
+                0x10006b24       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10006b24                usbd_control_reset
  .text.usbd_control_set_complete_callback
-                0x10006c40        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x10006c40                usbd_control_set_complete_callback
+                0x10006b38        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10006b38                usbd_control_set_complete_callback
  .text.usbd_control_set_request
-                0x10006c4c       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x10006c4c                usbd_control_set_request
+                0x10006b44       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10006b44                usbd_control_set_request
  .text.usbd_control_xfer_cb
-                0x10006c68       0xf4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x10006c68                usbd_control_xfer_cb
+                0x10006b60       0xf4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10006b60                usbd_control_xfer_cb
  .text.tud_cdc_n_connected
-                0x10006d5c       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10006d5c                tud_cdc_n_connected
+                0x10006c54       0x30 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006c54                tud_cdc_n_connected
  .text.tud_cdc_n_available
-                0x10006d8c       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10006d8c                tud_cdc_n_available
+                0x10006c84       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006c84                tud_cdc_n_available
  .text.tud_cdc_n_read
-                0x10006da4       0x70 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10006da4                tud_cdc_n_read
+                0x10006c9c       0x70 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006c9c                tud_cdc_n_read
  .text.tud_cdc_n_write_flush
-                0x10006e14       0x78 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10006e14                tud_cdc_n_write_flush
+                0x10006d0c       0x78 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006d0c                tud_cdc_n_write_flush
  .text.tud_cdc_n_write
-                0x10006e8c       0x34 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10006e8c                tud_cdc_n_write
+                0x10006d84       0x34 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006d84                tud_cdc_n_write
  .text.tud_cdc_n_write_available
-                0x10006ec0       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10006ec0                tud_cdc_n_write_available
+                0x10006db8       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006db8                tud_cdc_n_write_available
  .text.cdcd_init
-                0x10006ed8       0x7c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10006ed8                cdcd_init
+                0x10006dd0       0x7c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006dd0                cdcd_init
  .text.cdcd_reset
-                0x10006f54       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10006f54                cdcd_reset
+                0x10006e4c       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006e4c                cdcd_reset
  .text.cdcd_open
-                0x10006f80       0xe4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10006f80                cdcd_open
+                0x10006e78       0xe4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006e78                cdcd_open
  .text.cdcd_control_xfer_cb
-                0x10007064       0xe4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10007064                cdcd_control_xfer_cb
+                0x10006f5c       0xe4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10006f5c                cdcd_control_xfer_cb
  .text.cdcd_xfer_cb
-                0x10007148      0x13c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10007148                cdcd_xfer_cb
+                0x10007040      0x13c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10007040                cdcd_xfer_cb
  .text.tusb_init
-                0x10007284        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10007284                tusb_init
+                0x1000717c        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x1000717c                tusb_init
  .text.tusb_inited
-                0x10007290        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10007290                tusb_inited
+                0x10007188        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10007188                tusb_inited
  .text.tu_edpt_claim
-                0x10007298       0x50 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10007298                tu_edpt_claim
+                0x10007190       0x50 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10007190                tu_edpt_claim
  .text.tu_edpt_release
-                0x100072e8       0x38 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x100072e8                tu_edpt_release
+                0x100071e0       0x38 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x100071e0                tu_edpt_release
  .text.tu_edpt_validate
-                0x10007320       0x7c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10007320                tu_edpt_validate
+                0x10007218       0x7c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10007218                tu_edpt_validate
  .text.tu_edpt_bind_driver
-                0x1000739c       0x34 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x1000739c                tu_edpt_bind_driver
+                0x10007294       0x34 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10007294                tu_edpt_bind_driver
  .text.tu_fifo_config
-                0x100073d0       0x6c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100073d0                tu_fifo_config
+                0x100072c8       0x6c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100072c8                tu_fifo_config
  .text.tu_fifo_count
-                0x1000743c       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x1000743c                tu_fifo_count
+                0x10007334       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10007334                tu_fifo_count
  .text.tu_fifo_empty
-                0x10007468       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10007468                tu_fifo_empty
+                0x10007360       0x10 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10007360                tu_fifo_empty
  .text.tu_fifo_remaining
-                0x10007478       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10007478                tu_fifo_remaining
+                0x10007370       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10007370                tu_fifo_remaining
  .text.tu_fifo_read
-                0x100074a4       0x9c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100074a4                tu_fifo_read
+                0x1000739c       0x9c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x1000739c                tu_fifo_read
  .text.tu_fifo_read_n
-                0x10007540       0xe8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10007540                tu_fifo_read_n
+                0x10007438       0xe8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10007438                tu_fifo_read_n
  .text.tu_fifo_write
-                0x10007628       0x88 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10007628                tu_fifo_write
+                0x10007520       0x88 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10007520                tu_fifo_write
  .text.tu_fifo_write_n
-                0x100076b0      0x170 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100076b0                tu_fifo_write_n
+                0x100075a8      0x170 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100075a8                tu_fifo_write_n
  .text.tu_fifo_clear
-                0x10007820       0x40 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10007820                tu_fifo_clear
+                0x10007718       0x40 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10007718                tu_fifo_clear
  .text.tu_fifo_set_overwritable
-                0x10007860       0x48 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10007860                tu_fifo_set_overwritable
+                0x10007758       0x48 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10007758                tu_fifo_set_overwritable
  .text.pio_claim_unused_sm
-                0x100078a8       0x3c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x100078a8                pio_claim_unused_sm
+                0x100077a0       0x3c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x100077a0                pio_claim_unused_sm
  .text.pio_add_program
-                0x100078e4       0xf0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x100078e4                pio_add_program
+                0x100077dc       0xf0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x100077dc                pio_add_program
  .text.pio_sm_set_consecutive_pindirs
-                0x100079d4       0xa8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x100079d4                pio_sm_set_consecutive_pindirs
+                0x100078cc       0xa8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x100078cc                pio_sm_set_consecutive_pindirs
  .text.pio_sm_init
-                0x10007a7c       0x98 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x10007a7c                pio_sm_init
+                0x10007974       0x98 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x10007974                pio_sm_init
  .text.core1_trampoline
-                0x10007b14        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10007a0c        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .text.core1_wrapper
-                0x10007b18        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-                0x10007b18                core1_wrapper
+                0x10007a10        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10007a10                core1_wrapper
  .text.multicore_fifo_push_blocking
-                0x10007b24       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-                0x10007b24                multicore_fifo_push_blocking
+                0x10007a1c       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10007a1c                multicore_fifo_push_blocking
  .text.multicore_fifo_pop_blocking
-                0x10007b38       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-                0x10007b38                multicore_fifo_pop_blocking
+                0x10007a30       0x1c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10007a30                multicore_fifo_pop_blocking
  .text.multicore_launch_core1_raw
-                0x10007b54       0x84 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-                0x10007b54                multicore_launch_core1_raw
+                0x10007a4c       0x84 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10007a4c                multicore_launch_core1_raw
  .text.multicore_launch_core1
-                0x10007bd8       0x58 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-                0x10007bd8                multicore_launch_core1
- .text          0x10007c30       0x5c /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x10007c30                strlen
+                0x10007ad0       0x58 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10007ad0                multicore_launch_core1
+ .text          0x10007b28       0x5c /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x10007b28                strlen
  *(.fini)
- .fini          0x10007c8c        0x4 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crti.o
-                0x10007c8c                _fini
- .fini.__stub   0x10007c90       0xd0 linker stubs
+ .fini          0x10007b84        0x4 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crti.o
+                0x10007b84                _fini
+ .fini.__stub   0x10007b88       0xd0 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2192,164 +2192,160 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x10007d60        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x10007d60                        . = ALIGN (0x4)
+ .eh_frame      0x10007c58        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x10007c58                        . = ALIGN (0x4)
 
-.glue_7         0x10007d60        0x0
- .glue_7        0x10007d60        0x0 linker stubs
+.glue_7         0x10007c58        0x0
+ .glue_7        0x10007c58        0x0 linker stubs
 
-.glue_7t        0x10007d60        0x0
- .glue_7t       0x10007d60        0x0 linker stubs
+.glue_7t        0x10007c58        0x0
+ .glue_7t       0x10007c58        0x0 linker stubs
 
-.vfp11_veneer   0x10007d60        0x0
- .vfp11_veneer  0x10007d60        0x0 linker stubs
+.vfp11_veneer   0x10007c58        0x0
+ .vfp11_veneer  0x10007c58        0x0 linker stubs
 
-.v4_bx          0x10007d60        0x0
- .v4_bx         0x10007d60        0x0 linker stubs
+.v4_bx          0x10007c58        0x0
+ .v4_bx         0x10007c58        0x0 linker stubs
 
-.iplt           0x10007d60        0x0
- .iplt          0x10007d60        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x10007c58        0x0
+ .iplt          0x10007c58        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x10007d60      0x868
+.rodata         0x10007c58      0x858
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
- .rodata.fetch_spi.constprop.0.str1.4
-                0x10007d60       0x19 CMakeFiles/tpm_sniffer.dir/main.c.obj
- *fill*         0x10007d79        0x3 
+ .rodata.fetch_spi_bios.constprop.0.str1.4
+                0x10007c58       0x19 CMakeFiles/tpm_sniffer.dir/main.c.obj
+ *fill*         0x10007c71        0x3 
  .rodata.main.str1.4
-                0x10007d7c      0x2a6 CMakeFiles/tpm_sniffer.dir/main.c.obj
+                0x10007c74      0x2a6 CMakeFiles/tpm_sniffer.dir/main.c.obj
                                 0x2aa (size before relaxing)
- *fill*         0x10008022        0x2 
+ *fill*         0x10007f1a        0x2 
  .rodata.vmk_header
-                0x10008024        0xc CMakeFiles/tpm_sniffer.dir/main.c.obj
+                0x10007f1c        0xc CMakeFiles/tpm_sniffer.dir/main.c.obj
  .rodata.spi_bios_sniffer_program
-                0x10008030        0x6 CMakeFiles/tpm_sniffer.dir/main.c.obj
- *fill*         0x10008036        0x2 
+                0x10007f28        0x6 CMakeFiles/tpm_sniffer.dir/main.c.obj
+ *fill*         0x10007f2e        0x2 
  .rodata.spi_bios_sniffer_program_instructions
-                0x10008038        0xe CMakeFiles/tpm_sniffer.dir/main.c.obj
- *fill*         0x10008046        0x2 
- .rodata.spi_sniffer_program
-                0x10008048        0x6 CMakeFiles/tpm_sniffer.dir/main.c.obj
- *fill*         0x1000804e        0x2 
- .rodata.spi_sniffer_program_instructions
-                0x10008050        0xc CMakeFiles/tpm_sniffer.dir/main.c.obj
+                0x10007f30        0xe CMakeFiles/tpm_sniffer.dir/main.c.obj
+ *fill*         0x10007f3e        0x2 
  .rodata.lpc_sniffer_program
-                0x1000805c        0x6 CMakeFiles/tpm_sniffer.dir/main.c.obj
- *fill*         0x10008062        0x2 
+                0x10007f40        0x6 CMakeFiles/tpm_sniffer.dir/main.c.obj
+ *fill*         0x10007f46        0x2 
  .rodata.lpc_sniffer_program_instructions
-                0x10008064       0x1a CMakeFiles/tpm_sniffer.dir/main.c.obj
- *fill*         0x1000807e        0x2 
+                0x10007f48       0x1a CMakeFiles/tpm_sniffer.dir/main.c.obj
+ *fill*         0x10007f62        0x2 
  .rodata.spin_lock_claim_unused.str1.4
-                0x10008080       0x1b CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x1000809b        0x1 
+                0x10007f64       0x1b CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x10007f7f        0x1 
  .rodata.user_irq_claim_unused.str1.4
-                0x1000809c       0x1b CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100080b7        0x1 
+                0x10007f80       0x1b CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10007f9b        0x1 
  .rodata.hardware_alarm_claim.str1.4
-                0x100080b8       0x22 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x100080da        0x2 
+                0x10007f9c       0x22 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10007fbe        0x2 
  .rodata.panic.str1.4
-                0x100080dc       0x12 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x100080ee        0x2 
+                0x10007fc0       0x12 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10007fd2        0x2 
  .rodata.hard_assertion_failure.str1.4
-                0x100080f0        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10007fd4        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata._ftoa.str1.4
-                0x100080fc       0x15 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x10008111        0x3 
+                0x10007fe0       0x15 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x10007ff5        0x3 
  .rodata._vsnprintf
-                0x10008114      0x19c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10007ff8      0x19c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x10008194        0x4 
  .rodata.pow10.0
-                0x100082b0       0x50 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10008198       0x50 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.str1.4
-                0x10008300       0x40 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100081e8       0x40 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x10008340        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10008228        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x1000834c        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10008234        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x10008358        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10008240        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x10008364        0x2 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x10008366        0x2 
+                0x1000824c        0x2 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x1000824e        0x2 
  .rodata.str1.4
-                0x10008368       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10008250       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_33.4
-                0x10008394        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x1000827c        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_34.5
-                0x100083a0        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10008288        0x8 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata._resetd_driver
-                0x100083a8       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10008290       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .rodata.str1.4
-                0x100083c0       0x13 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x100083d3        0x1 
+                0x100082a8       0x13 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x100082bb        0x1 
  .rodata.__bi_182.0
-                0x100083d4        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x100082bc        0xc CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.str1.4
-                0x100083e0       0x2a CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x1000840a        0x2 
+                0x100082c8       0x2a CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x100082f2        0x2 
  .rodata.usbd_desc_str
-                0x1000840c       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x100082f4       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_cfg
-                0x10008424       0x54 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x1000830c       0x54 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_device
-                0x10008478       0x12 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x1000848a        0x2 
+                0x10008360       0x12 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x10008372        0x2 
  .rodata.str1.4
-                0x1000848c       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10008374       0x14 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.str1.4
-                0x100084a0       0x49 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x10008388       0x49 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
                                  0x53 (size before relaxing)
- *fill*         0x100084e9        0x3 
+ *fill*         0x100083d1        0x3 
  .rodata.tud_task_ext
-                0x100084ec       0x8c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100083d4       0x8c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x10008578       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10008460       0x18 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.pio_claim_unused_sm.str1.4
-                0x10008590       0x24 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x10008478       0x24 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
  .rodata.pio_add_program.str1.4
-                0x100085b4       0x11 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x100085c8                        . = ALIGN (0x4)
- *fill*         0x100085c5        0x3 
+                0x1000849c       0x11 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x100084b0                        . = ALIGN (0x4)
+ *fill*         0x100084ad        0x3 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x100085c8                        . = ALIGN (0x4)
+                0x100084b0                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x100085c8                        __exidx_start = .
+                0x100084b0                        __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x100085c8                        __exidx_end = .
-                0x100085c8                        . = ALIGN (0x4)
-                0x100085c8                        __binary_info_start = .
+                0x100084b0                        __exidx_end = .
+                0x100084b0                        . = ALIGN (0x4)
+                0x100084b0                        __binary_info_start = .
 
-.binary_info    0x100085c8       0x28
+.binary_info    0x100084b0       0x28
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr81
-                0x100085c8        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100084b0        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x100085cc        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100084b4        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x100085d0        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100084b8        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x100085d4        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100084bc        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x100085d8        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100084c0        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x100085dc        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100084c4        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr22
-                0x100085e0        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100084c8        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr34
-                0x100085e4        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100084cc        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr33
-                0x100085e8        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100084d0        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr182
-                0x100085ec        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x100085f0                        __binary_info_end = .
+                0x100084d4        0x4 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x100084d8                        __binary_info_end = .
 
-.rel.dyn        0x100085f0        0x0
- .rel.iplt      0x100085f0        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x100085f0                        . = ALIGN (0x4)
+.rel.dyn        0x100084d8        0x0
+ .rel.iplt      0x100084d8        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x100084d8                        . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -2358,7 +2354,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
                 0x20000000       0xc0 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0      0xe90 load address 0x100085f0
+.data           0x200000c0      0xe90 load address 0x100084d8
                 0x200000c0                        __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2500,36 +2496,36 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(.jcr)
                 0x20000f50                        . = ALIGN (0x4)
                 0x20000f50                        __data_end__ = .
-                0x100085f0                        __etext = LOADADDR (.data)
+                0x100084d8                        __etext = LOADADDR (.data)
 
 .tm_clone_table
-                0x20000f50        0x0 load address 0x10009480
+                0x20000f50        0x0 load address 0x10009368
  .tm_clone_table
                 0x20000f50        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x20000f50        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x20000f50        0x0 load address 0x10009480
+.igot.plt       0x20000f50        0x0 load address 0x10009368
  .igot.plt      0x20000f50        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x20000f50        0x0 load address 0x10009480
+                0x20000f50        0x0 load address 0x10009368
                 0x20000f50                        . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x20040000        0x0 load address 0x10009480
+.scratch_x      0x20040000        0x0 load address 0x10009368
                 0x20040000                        __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                        . = ALIGN (0x4)
                 0x20040000                        __scratch_x_end__ = .
-                0x10009480                        __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10009368                        __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10009480
+.scratch_y      0x20041000        0x0 load address 0x10009368
                 0x20041000                        __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                        . = ALIGN (0x4)
                 0x20041000                        __scratch_y_end__ = .
-                0x10009480                        __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10009368                        __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x20000f50     0x2da4
                 0x20000f50                        . = ALIGN (0x4)
@@ -2664,8 +2660,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x10009480        0x0
-                0x10009480                        PROVIDE (__flash_binary_end = .)
+.flash_end      0x10009368        0x0
+                0x10009368                        PROVIDE (__flash_binary_end = .)
                 0x20040000                        __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                        __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                        __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2746,7 +2742,7 @@ LOAD CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/lib/tinyusb/src/common/t
 LOAD CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 LOAD CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 LOAD CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-LOAD /tmp/ccZUZGP7.o
+LOAD /tmp/cc6sztYH.o
 LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -2872,7 +2868,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000087e       0x2c CMakeFiles/tpm_sniffer.dir/home/pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .ARM.attributes
-                0x000008aa       0x22 /tmp/ccZUZGP7.o
+                0x000008aa       0x22 /tmp/cc6sztYH.o
  .ARM.attributes
                 0x000008cc       0x1e /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes

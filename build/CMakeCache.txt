@@ -496,7 +496,7 @@ PICO_BOOT_STAGE2_DIR:INTERNAL=/home/pico/pico/pico-sdk/src/rp2_common/boot_stage
 PICO_CMAKE_PRELOAD_PLATFORM_DIR:INTERNAL=/home/pico/pico/pico-sdk/cmake/preload/platforms
 PICO_CMAKE_PRELOAD_PLATFORM_FILE:INTERNAL=/home/pico/pico/pico-sdk/cmake/preload/platforms/rp2040.cmake
 PICO_COMPILER_ASM:INTERNAL=/usr/bin/arm-none-eabi-gcc
-PICO_DOXYGEN_EXCLUDE_PATHS:INTERNAL= /home/pico/pico/pico-sdk/src/rp2_common/cmsis /home/pico/pico/pico-sdk/src/rp2040/hardware_regs
+PICO_DOXYGEN_EXCLUDE_PATHS:INTERNAL= /home/pico/pico/pico-sdk/src/rp2_common/cmsis /home/pico/pico/pico-sdk/src/rp2040/hardware_regs /home/pico/pico/pico-sdk/src/rp2_common/cmsis /home/pico/pico/pico-sdk/src/rp2040/hardware_regs
 PICO_DOXYGEN_PATHS:INTERNAL= /home/pico/pico/pico-sdk/src/common /home/pico/pico/pico-sdk/lib/cyw43-driver/src /home/pico/pico/pico-sdk/src/rp2_common /home/pico/pico/pico-sdk/src/rp2040
 PICO_NO_HARDWARE:INTERNAL=0
 PICO_ON_DEVICE:INTERNAL=1
@@ -513,6 +513,8 @@ _Python3_EXECUTABLE:INTERNAL=/usr/bin/python3
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;2;32;;;/usr/lib/python3.11;/usr/lib/python3.11;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=4c8bfa8951e99fa32e4000a94f8c04a2
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 

@@ -75,7 +75,6 @@ preinstall: pico-sdk/preinstall
 # The main recursive "clean" target.
 clean: CMakeFiles/tpm_sniffer.dir/clean
 clean: CMakeFiles/tpm_sniffer_lpc_sniffer_pio_h.dir/clean
-clean: CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/clean
 clean: CMakeFiles/tpm_sniffer_spi_bios_sniffer_pio_h.dir/clean
 clean: CMakeFiles/ELF2UF2Build.dir/clean
 clean: pico-sdk/clean
@@ -1507,7 +1506,6 @@ pico-sdk/tools/clean:
 
 # All Build rule for target.
 CMakeFiles/tpm_sniffer.dir/all: CMakeFiles/tpm_sniffer_lpc_sniffer_pio_h.dir/all
-CMakeFiles/tpm_sniffer.dir/all: CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/all
 CMakeFiles/tpm_sniffer.dir/all: CMakeFiles/tpm_sniffer_spi_bios_sniffer_pio_h.dir/all
 CMakeFiles/tpm_sniffer.dir/all: CMakeFiles/ELF2UF2Build.dir/all
 CMakeFiles/tpm_sniffer.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
@@ -1518,7 +1516,7 @@ CMakeFiles/tpm_sniffer.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/b
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tpm_sniffer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles 96
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles 95
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tpm_sniffer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles 0
 .PHONY : CMakeFiles/tpm_sniffer.dir/rule
@@ -1557,32 +1555,6 @@ tpm_sniffer_lpc_sniffer_pio_h: CMakeFiles/tpm_sniffer_lpc_sniffer_pio_h.dir/rule
 CMakeFiles/tpm_sniffer_lpc_sniffer_pio_h.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpm_sniffer_lpc_sniffer_pio_h.dir/build.make CMakeFiles/tpm_sniffer_lpc_sniffer_pio_h.dir/clean
 .PHONY : CMakeFiles/tpm_sniffer_lpc_sniffer_pio_h.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir
-
-# All Build rule for target.
-CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/all: pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/build.make CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/build.make CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles --progress-num=98 "Built target tpm_sniffer_spi_sniffer_pio_h"
-.PHONY : CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles 9
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico/pico/projects/pico-tpmsniffer/build/CMakeFiles 0
-.PHONY : CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/rule
-
-# Convenience name for target.
-tpm_sniffer_spi_sniffer_pio_h: CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/rule
-.PHONY : tpm_sniffer_spi_sniffer_pio_h
-
-# clean rule for target.
-CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/build.make CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/clean
-.PHONY : CMakeFiles/tpm_sniffer_spi_sniffer_pio_h.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/tpm_sniffer_spi_bios_sniffer_pio_h.dir
