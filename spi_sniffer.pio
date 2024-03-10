@@ -1,0 +1,71 @@
+.program spi_sniffer
+
+; gpio 2,3,4,5 are DI,DO,CLK,SELECT respectively
+; gpio 5 is also assigned as JMP PIN
+; gpio 6 is side set
+; gpio 13 is used as trigger pin eventually but currently not used
+
+; wait 1 gpio 13
+
+; IN pin 0 DI 
+; IN pin 1 DO
+; IN pin 2 CLK
+; IN pin 3 SELECT / JMP_PIN
+
+; the flow below can be simplified by removing
+; the counter instructions (set, jmp x--) 
+
+.side_set 1 opt
+
+entry:
+.wrap_target                ; wait for SCK to go High   
+    wait 1 pin 3 side 1
+    set x,7
+clock_cycle:
+    wait 0 pin 2	    	; wait for clock low
+	wait 1 pin 2			; wait for clock high (sample @ rising edge)
+	jmp pin sample_bits     ; make sure SELECT is still high before sampling bit
+	jmp entry side 0
+sample_bits:
+	in pins, 2 side 1		; sample data bit from DO and DI
+    jmp x-- clock_cycle 
+.wrap 
+
+% c-sdk {
+static inline void spi_sniffer_program_init(PIO pio, uint sm, uint offset, uint base_pin, uint jmp_pin) {
+    pio_sm_config c = spi_sniffer_program_get_default_config(offset);
+    
+    // initialize 4 input pins DI, DO, CLK, SELECT
+    for(int i=0; i < 4; i++) {
+        pio_gpio_init(pio, base_pin + i);
+    }
+
+    // Set all pins to input (false = input)
+    pio_sm_set_consecutive_pindirs(pio, sm, base_pin, 4, false);
+    sm_config_set_in_pins(&c, base_pin);
+    sm_config_set_jmp_pin(&c, jmp_pin);
+    
+    // side set pin gpio 6 for additional monitoring / debug
+    pio_gpio_init(pio, 6);
+    sm_config_set_sideset_pins(&c, 6);
+    pio_sm_set_consecutive_pindirs(pio, sm, 6, 1, true);
+    gpio_pull_down(6);
+    
+    // set autopush at threshold 16 bit
+    // we are reading DO and DI at the same time ( 2 * 8 bit)
+    sm_config_set_in_shift (&c, false, true, 16);
+    
+    // Chain FIFOs together as we will *only* receive.
+    // This will ensure we will not block.
+    sm_config_set_fifo_join(&c, PIO_FIFO_JOIN_RX);
+
+    // we do not require specific cycle as we do have the clock signal
+    float div = 1.f; //(float) clock_get_hz(clk_sys) / 270000000.0; 
+    sm_config_set_clkdiv(&c, div);
+    
+    // Load our configuration, and jump to the start of the program
+    pio_sm_init(pio, sm, offset, &c);
+    // Set the state machine running
+    pio_sm_set_enabled(pio, sm, true);
+}
+%}
