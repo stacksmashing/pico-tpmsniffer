@@ -18,6 +18,7 @@
 #define TRIGGER_PIN 13
 #define PSELECT0 14
 #define PSELECT1 15
+#define LED_PIN 25
 
 unsigned char reverse(unsigned char b) {
    b = (b & 0xF0) >> 4 | (b & 0x0F) << 4;
@@ -103,7 +104,8 @@ static inline uint32_t fetch_lpc_message(PIO pio, uint sm) {
 
 
 /* --- BEGIN --- FUNCTIONS FOR SPI SPECIFIC SNIFFING ---*/
-/* TODO: take WAIT cycles into account before reading in MISO data */
+
+bool is_Wait = false;
 static inline uint8_t fetch_miso_byte(PIO pio, uint sm){
     uint8_t miso_byte = 0x0;
     uint16_t miso_msk = 0b1000000000000000;
@@ -113,6 +115,7 @@ static inline uint8_t fetch_miso_byte(PIO pio, uint sm){
         miso_msk = miso_msk >> 2;
     }
     //printf("--> %02X\n",miso_byte);
+    is_Wait = is_Wait && (!( miso_byte & 0x01));
     return miso_byte;
 }
 
@@ -120,16 +123,20 @@ static inline uint16_t fetch_spi_message(PIO pio, uint sm) {
     uint32_t mosi_msg=0x0;
     uint32_t data;
     bool init = true;
+    is_Wait = false;
     while(1)
     {
         char miso_byte = 0x0;
         char mosi_byte = 0x0;
         uint16_t mosi_msk = 0b0100000000000000;
+        uint16_t miso_msk = 0b1000000000000000;
         data = fetch(pio, sm);//( pio_sm_get_blocking(pio, sm) );
         for (int i = 0; i < 8 ; i++)
         {   
             mosi_byte = mosi_byte | ((char) ((data & mosi_msk) >> (7-i))) ;
             mosi_msk = mosi_msk >> 2;
+            miso_byte = miso_byte | ((char) ((data & miso_msk) >> (8-i))) ;
+            miso_msk = miso_msk >> 2;
         }
         if (init) {
             mosi_msg = mosi_msg | mosi_byte;
@@ -143,6 +150,8 @@ static inline uint16_t fetch_spi_message(PIO pio, uint sm) {
         // Read FIFO_0 0x8XD40024 where X holds the number of bytes to be transferred
         // 0b0000000 = 1 byte; 0b00000001 = 2 bytes ; 0b00000010 = 3 bytes etc. up to 64 bytes 
         uint16_t bytes_to_read = (uint16_t) ((mosi_msg >> 24) & 0xb11111) + 1;
+        // check if the last miso_byte is a WAIT state request
+        is_Wait = (!( miso_byte & 0x01)); // if miso_byte last bit is 0 the it is a wait state request; if 1 then not
         return bytes_to_read;
     }
 }
@@ -179,6 +188,11 @@ void core1_entry() {
     
             while(1) {
                 uint16_t bytes_to_read = fetch_spi_message(pio, sm);
+                while (is_Wait){
+                    // skip wait states
+                    char dummy = fetch_miso_byte(pio,sm);
+                    //printf("[(%d) %02d] %02x \n",is_Wait, bytes_to_read,dummy);
+                }
                 for(int n=0; n < bytes_to_read; n++){
                     char message = fetch_miso_byte(pio,sm);
                     message_buffer[msg_buffer_ptr++] = message;
@@ -229,20 +243,25 @@ int main() {
         currently not used, but it is planned to implement a 
         trigger for the state machine to start to have a bit
         more control on the start of the sniffing process.
+
+        LED pin:
+        using the onboard led for some basic visuals
     */
     gpio_init(TRIGGER_PIN);
     gpio_init(PSELECT0);
     gpio_init(PSELECT1);
-    gpio_set_dir(TRIGGER_PIN,1);
-    gpio_set_dir(PSELECT0,0); 
-    gpio_set_dir(PSELECT1,0);
+    gpio_init(LED_PIN);
+    gpio_set_dir(LED_PIN,1);
+    gpio_set_dir(TRIGGER_PIN,1); // output
+    gpio_set_dir(PSELECT0,0); // input 
+    gpio_set_dir(PSELECT1,0); // input
     gpio_pull_down(TRIGGER_PIN);
     gpio_pull_down(PSELECT1);
     gpio_pull_down(PSELECT0);
     gpio_put(TRIGGER_PIN,0);
+    gpio_put(LED_PIN,0);
 
     while (!stdio_usb_connected());
-
 
     puts(" _           ");
     puts("|_) o  _  _  ");
@@ -268,7 +287,7 @@ int main() {
         sleep_ms(1000);
     }
     printf("...SNIFFING...\n");
-    
+    gpio_put(LED_PIN,1);
     multicore_launch_core1(core1_entry);
 
     while(1) {
@@ -304,7 +323,13 @@ int main() {
                 }
                 puts("");
             }
-            
+            // blinkyblink
+            for (int i = 0 ; i < 20; i++){
+                gpio_put(LED_PIN,1);
+                sleep_ms(300);
+                gpio_put(LED_PIN,0);
+                sleep_ms(100);
+            }
         }
     }
 }
